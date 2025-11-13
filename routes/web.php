@@ -1,7 +1,14 @@
 <?php
 
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+//route barang
+Route::resource('/barang', BarangController::class);
+
+
+//route transaksi
+Route::resource('/transaksi', TransaksiController::class);
