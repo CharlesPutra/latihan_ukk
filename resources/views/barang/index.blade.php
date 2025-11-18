@@ -6,7 +6,7 @@
 
         <!-- TABLE -->
         <div class="table-responsive">
-            <a href="{{ route('barang.create') }}" class="btn btn-primary">Tambah data</a>
+            <a href="{{ route('barang.create') }}" class="btn btn-primary  mb-2">Tambah data</a>
             <table class="table table-bordered table-hover align-middle">
                 <thead class="table-dark text-center">
                     <tr>

@@ -5,7 +5,7 @@
     <div class="card shadow-lg border-0">
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
             <h4 class="mb-0">Daftar Transaksi</h4>
-            <a href="{{ route('transaksi.create') }}" class="btn btn-success btn-sm">+ Tambah Transaksi</a>
+            <a href="{{ route('transaksi.create') }}" class="btn btn-success btn-sm mb-2">+ Tambah Transaksi</a>
         </div>
 
         <div class="card-body">
@@ -37,7 +37,7 @@
                                 <td>{{ $item->created_at->format('d-m-Y H:i') }}</td>
                                 <td>
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="{{ route('transaksi.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        {{-- <a href="{{ route('transaksi.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a> --}}
                                         <form action="{{ route('transaksi.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Yakin hapus data ini?')">
                                             @csrf
                                             @method('DELETE')
